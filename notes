@@ -1,0 +1,161 @@
+Prototype in JS
+A javaScript object is an entity having state and behavior (properties and method).
+Js objects have a special property called prototype.
+We can set a prototype using __proto__.
+
+Classes in JS
+Class is a program-code template for creating objects.
+Those objects will have some state(variable) & some behaviour (functions) inside it.
+
+class MyClass{
+constructor(){...}
+myMethod(){...}
+}
+Let myObj=new MyClass();
+
+Classes give us a template or blueprint to create an object by which all the objects are the same.
+
+Constructor() method is : 
+Automatically invoke by new
+We don’t need to call it. It automatically invokes.
+Initialize object
+
+Inheritance in JS 
+Inheritance is passing down properties & methods from parent class to child class.
+
+Class Parent{
+}
+
+Class Child extends parent{
+}
+
+If Child & Parents have same method, child’s method will be used.[Method Overriding]super 
+
+super Keyword
+The super keyword is used to call the constructor of its parent class to access the parent’s properties and methods.
+
+super(args)
+
+super.parentMethod(args)
+
+
+
+
+
+
+
+🧠 JavaScript Notes
+
+✅ JavaScript Objects & Prototype
+A JavaScript object is an entity with:
+
+
+State → (properties)
+
+
+Behavior → (methods/functions)
+
+
+All JavaScript objects have a special internal property called [[Prototype]], which can be accessed using:
+
+ obj.__proto__
+
+
+This prototype is used for inheritance and method sharing between objects.
+
+
+
+🧱 JavaScript Classes
+A class in JavaScript is a blueprint/template for creating objects.
+
+
+Objects created from a class share the same:
+
+
+State → via variables (properties)
+
+
+Behavior → via functions (methods)
+
+
+Syntax:
+class MyClass {
+  constructor() {
+    // Initialization code
+  }
+
+  myMethod() {
+    // Method logic
+  }
+}
+
+let myObj = new MyClass(); // Creates an object from the class
+
+constructor() Method:
+Special method inside a class.
+
+
+Automatically invoked when an object is created using new.
+
+
+Used to initialize object properties.
+
+
+
+🔁 Inheritance in JavaScript
+Inheritance allows one class (child) to inherit properties and methods from another class (parent).
+
+
+Syntax:
+class Parent {
+  parentMethod() {
+    console.log("This is the parent method");
+  }
+}
+
+class Child extends Parent {
+  childMethod() {
+    console.log("This is the child method");
+  }
+}
+
+When both parent and child have a method with the same name, the child's method overrides the parent's method. This is known as method overriding.
+
+
+
+🗝️ super Keyword
+super is used to:
+
+
+Call the constructor of the parent class.
+
+
+Access methods and properties from the parent class.
+
+
+Examples:
+class Parent {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log(`Hello from ${this.name}`);
+  }
+}
+
+class Child extends Parent {
+  constructor(name, age) {
+    super(name); // Calls parent constructor
+    this.age = age;
+  }
+
+  greet() {
+    super.greet(); // Calls parent method
+    console.log(`I am ${this.age} years old`);
+  }
+}
+
+
+Let me know if you’d like this exported as a PDF, or if you want code examples for prototypes too.
+
